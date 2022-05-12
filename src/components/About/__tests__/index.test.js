@@ -8,8 +8,12 @@ afterEach(cleanup);
 
 describe('About component', () => {
   it('renders', () => {
-    render(<About />);
-  });
+    render(<Nav
+      categories={categories}
+      setCurrentCategory={mockSetCurrentCategory}
+      currentCategory={mockCurrentCategory}
+    />);
+  })
   
   it('matches snapshot DOM node structure', () => {
     const { asFragment } = render(<About />);
